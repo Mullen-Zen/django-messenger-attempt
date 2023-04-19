@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{% block title %}{% endblock %}</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'hello/site.css' %}"/>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="{% url 'detail' %}" class="navbar-brand">Detail</a>
+        </div>
+
+        <div class="body-content">
+            {% block content %}
+            {% endblock %}
+            <hr />
+            <footer>
+                <p>&copy; 20XX</p>
+            </footer>
+        </div>
+    </body>
+</html>
